@@ -15,7 +15,7 @@ const endpoint = 'https://jsonplaceholder.typicode.com/posts/' + slug
  * Removing the `key` option resolves this
  * */
 const {data: article} = await useFetch(endpoint, {
-    key: route.fullPath,
+    key: 'articles-' + route.params.slug,
 })
 
 // const {data: article} = await useAsyncData(route.fullPath, () => {
